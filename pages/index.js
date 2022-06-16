@@ -1,13 +1,14 @@
 const styles = {
-  container: 'h-full w-full flex bg-[#fff]'
-  }  
+    container: 'h-full w-full flex bg-[#fff]'
+}
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Sidebar />
-      <main />
+    return ( <
+        div className = { styles.container } >
+        <
+        Sidebar / > { /* <main /> } */ }
 
-    </div>
-  )
+        <
+        /div>
+    )
 }
