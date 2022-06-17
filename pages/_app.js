@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import { MoralisProvider } from 'react-moralis'
+import { AmazonProvider } from '../context/AmazonContext'
+import { MoralisProvider } from 'react-simple-hook-modal'
 
 function MyApp({ Component, pageProps }) {
   return ( 
