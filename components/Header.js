@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
-import logo from '../assets/amazon_logo_full.png'
-import image from 'next/image'
 import { CgMenuGridO } from 'react-icons/cg'
+import logo from '../assets/amazon_logo_full.png'
+import Image from 'next/image'
 import { IoMdSearch } from 'react-icons/io'
+import { AmazonContext } from '../context/AmazonContext'
 import { FaCoins } from 'react-icons/fa'
 import {
     ModalProvider,
@@ -10,14 +11,11 @@ import {
     useModal,
     ModalTransition,
 } from 'react-simple-hook-modal'
-import BuyModal from './BuyModal'
 import 'react-simple-hook-modal/dist/styles.css'
-
-
+import BuyModal from './BuyModal'
 
 const Header = () => {
     const styles = {
-
         container: `h-[60px] w-full flex items-center gap-5 px-16`,
         logo: `flex items-center ml-[20px] cursor-pointer flex-1`,
         search: `p-[25px] mr-[30px] w-[400px] h-[40px] bg-white rounded-full shadow-lg flex flex items-center border border-black`,
@@ -29,7 +27,6 @@ const Header = () => {
 
     const { balance, buyTokens, getBalance } = useContext(AmazonContext)
     const { openModal, isModalOpen, closeModal } = useModal()
-
     return ( <
         ModalProvider >
         <
@@ -96,7 +93,6 @@ const Header = () => {
         /div> <
         /ModalProvider>
     )
-
 }
 
 export default Header
