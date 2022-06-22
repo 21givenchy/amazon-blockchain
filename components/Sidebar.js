@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import logo from '../assets/amazon_logo.png'
+import logo from '../assets/logo.jpeg'
 import logoFull from '../assets/logo.jpeg'
 import Image from 'next/image'
 import { FaBox } from 'react-icons/fa'
@@ -37,103 +37,103 @@ const Sidebar = () => {
         handleSetUsername,
     } = useContext(AmazonContext)
 
-    return ( <
-        div className = { styles.container } >
-        <
-        div className = { styles.profile } > {
-            isAuthenticated && ( <
-                >
-                <
-                div className = { styles.profilePicContainer } >
-                <
-                Image src = { `https://avatars.dicebear.com/api/pixel-art/${username}.svg` }
+    return (
+        <div className = { styles.container }>
+
+        <div className = { styles.profile }> {
+            isAuthenticated && ( <>
+
+
+                <div className = { styles.profilePicContainer }>
+
+                <Image src = { `https://avatars.dicebear.com/api/pixel-art/${username}.svg` }
                 alt = 'profile'
                 className = { styles.profilePic }
                 height = { 100 }
                 width = { 100 }
-                /> <
-                /div> {
-                    !username ? ( <
-                        >
-                        <
-                        div className = { styles.username } >
-                        <
-                        input type = 'text'
+                />
+                </div> {
+                    !username ? ( <>
+
+
+                        <div className = { styles.username }>
+
+                        <input type = 'text'
                         placeholder = 'Username....'
                         className = { styles.usernameInput }
                         value = { nickname }
-                        onChange = { e => setNickname(e.target.value) }
-                        /> <
-                        /div> <
-                        button className = { styles.setNickname }
-                        onClick = { handleSetUsername } >
-                        Set Nickname <
-                        /button> <
-                        />
-                    ) : ( <
-                        div >
-                        <
-                        div className = { styles.welcome } > Wecome { username } < /div> <
-                        /div>
+                        onChange = { e => setNickname(e.target.value) }/>
+
+                        </div>
+                        <button className = { styles.setNickname }
+                        onClick = { handleSetUsername }>
+                        Set Nickname
+                        </button>
+                        </>
+                    ) : (
+                        <div>
+
+                        <div className = { styles.welcome }>Wecome { username }</div>
+                        </div>
                     )
-                } <
-                />
+                }
+                </>
             )
-        } <
-        div className = { styles.connectButton } >
-        <
-        ConnectButton / >
-        <
-        /div> <
-        /div> <
-        div className = { styles.menu } >
-        <
-        Link href = '/' >
-        <
-        div className = { styles.menuItem } >
-        <
-        Image src = { logo }
+        }
+        <div className = { styles.connectButton }>
+
+        <ConnectButton/>
+
+        </div>
+        </div>
+        <div className = { styles.menu }>
+
+        <Link href = '/'>
+
+        <div className = { styles.menuItem }>
+
+        <Image src = { logo }
         height = { 30 }
         width = { 30 }
-        className = { styles.amazonLogo }
-        />
-        My Amazon <
-        br / > Board <
-        /div> <
-        /Link> <
-        div className = { styles.menuItem } >
-        <
-        FaBox / >
-        Collections <
-        /div> <
-        div className = { styles.menuItem } >
-        <
-        BsFillBookmarkFill / >
-        Saved <
-        /div> <
-        div className = { styles.menuItem } >
-        <
-        BsFillPersonFill / >
-        Profile <
-        /div> <
-        Link href = '/history' >
-        <
-        div className = { styles.menuItem } >
-        <
-        AiOutlineHistory / >
-        Transaction History <
-        /div> <
-        /Link> <
-        /div> <
-        div className = { styles.companyName } >
-        <
-        Image src = { logoFull }
+        className = { styles.amazonLogo }/>
+
+        My Amazon
+        <br/> Board
+        </div>
+        </Link>
+        <div className = { styles.menuItem }>
+
+        <FaBox/>
+        Collections
+        </div>
+        <div className = { styles.menuItem }>
+
+        <BsFillBookmarkFill/>
+        Saved
+        </div>
+        <div className = { styles.menuItem }>
+
+        <BsFillPersonFill/>
+        Profile
+        </div>
+        <Link href = '/history'>
+
+        <div className = { styles.menuItem }>
+
+        <AiOutlineHistory/>
+        Transaction History
+        </div>
+        </Link>
+        </div>
+        <div className = { styles.companyName }>
+
+        <Image src = { logoFull }
         alt = 'amazon'
         height = { 100 }
         width = { 100 }
-        /> <
-        /div> <
-        /div>
+        />
+        </div>
+        </div>
     )
 }
 

@@ -15,8 +15,8 @@ const history = () => {
   }
   const { ownedItems } = useContext(AmazonContext)
   // useEffect(() => {
-  //   console.log(ownedItems)
-  // }, [])
+  //   console.log(ownedItems);
+  // });
 
   return (
     <div className={styles.container}>

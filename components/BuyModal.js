@@ -30,8 +30,8 @@ const BuyModal = ({ close, buyTokens }) => {
     setEtherscanLink,
   } = useContext(AmazonContext)
   useEffect(() => {
-    calculatePrice()
-  }, [tokenAmount])
+    calculatePrice();
+  }, [tokenAmount]);
 
   const calculatePrice = () => {
     const price = parseFloat(tokenAmount * 0.0001)
