@@ -20,10 +20,10 @@ const history = () => {
 
   return (
     <div className={styles.container}>
-      <Sidebar />
+      <Sidebar/>
 
       <div className={styles.main}>
-        <Header />
+        <Header/>
         <div className={styles.tableContainer}>
           {ownedItems ? (
             <div className={styles.pageTitle}>Purchase History</div>

@@ -16,9 +16,9 @@ const Main = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
-      <Featured />
-      <Cards />
+      <Header/>
+      <Featured/>
+      <Cards/>
       {recentTransactions.length > 0 && (
         <h1 className={styles.recentTitle}>Recent Transaction</h1>
       )}
