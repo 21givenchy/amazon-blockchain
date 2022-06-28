@@ -28,15 +28,15 @@ const Transaction = ({ item }) => {
             <div className={styles.top}>
               <div className='flex w-full gap-[80px]'>
                 <div className={styles.topHeaderText}>
-                  ORDER PLACED <br />
+                  ORDER PLACED <br/>
                   {moment(asset.purchaseDate).format('MMMM Do YYYY')}
                 </div>
                 <div className={styles.topHeaderText}>
-                  TOTAL <br />
+                  TOTAL <br/>
                   {asset.price} AC
                 </div>
                 <div className={styles.topHeaderText}>
-                  SHIP TO <br />
+                  SHIP TO <br/>
                   {username}
                 </div>
               </div>

@@ -97,7 +97,7 @@ const Sidebar = () => {
         width = { 30 }
         className = { styles.amazonLogo }/>
 
-        My Amazon
+        21GIVENCHY 
         <br/> Board
         </div>
         </Link>

@@ -47,7 +47,7 @@ const Header = () => {
             placeholder='Search Your Assets...'
             className={styles.searchInput}
           />
-          <IoMdSearch fontSize={20} />
+          <IoMdSearch fontSize={20}/>
         </div>
         <div className={styles.menu}>
           <div className={styles.menuItem}>New Releases</div>
@@ -58,23 +58,24 @@ const Header = () => {
               onClick={openModal}
             >
               {balance}
-              <FaCoins className={styles.coins} />
+              <FaCoins className={styles.coins}/>
               <Modal isOpen={isModalOpen} transition={ModalTransition.SCALE}>
-                <BuyModal close={closeModal} buyTokens={buyTokens} />
+                <BuyModal close={closeModal} buyTokens={buyTokens}>
+                  </BuyModal>
               </Modal>
             </div>
           ) : (
             <div
               className={(styles.balance, styles.menuItem)}
-              onClick={openModal}
-            >
-              0 AC <FaCoins className={styles.coins} />
+              onClick={openModal}>
+            
+              0 AC <FaCoins className={styles.coins}/>
               <Modal isOpen={isModalOpen} transition={ModalTransition.SCALE}>
-                <BuyModal close={closeModal} buyTokens={buyTokens} />
+                <BuyModal close={closeModal} buyTokens={buyTokens}/>
               </Modal>
             </div>
           )}
-          <CgMenuGridO fontSize={30} className={styles.menuItem} />
+          <CgMenuGridO fontSize={30} className={styles.menuItem}/>
         </div>
       </div>
     </ModalProvider>

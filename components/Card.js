@@ -44,7 +44,7 @@ const Card = ({ item }) => {
         <div className = { styles.price }>
 
         { item.price }
-        AC < FaCoins className = { styles.coins }/>
+        AC <FaCoins className = { styles.coins }/>
         
         </div>
 
