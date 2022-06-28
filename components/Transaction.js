@@ -18,7 +18,7 @@ const Transaction = ({ item }) => {
     etherscanBtn: `font-bold rounded-full h-[40px] w-[150px] cursor-pointer text-[#3a2802] text-center border-2 border-[#ffd713] flex justify-center items-center`,
   }
 
-  const { username } = useContext(AmazonContext)
+  const { username } = useContext (AmazonContext)
 
   return (
     <>

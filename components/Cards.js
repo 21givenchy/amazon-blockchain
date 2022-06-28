@@ -8,7 +8,7 @@ const Cards = () => {
     title: `text-xl font-bolder mb-[20px] mt-[30px]  ml-[30px]`,
     cards: `flex items-center  flex-wrap gap-[80px]`,
   }
-  const { assets } = useContext(AmazonContext)
+  const { assets } = useContext (AmazonContext)
 
   return (
     <div className={styles.container}>
