@@ -18,35 +18,33 @@ const history = () => {
         return console.log(ownedItems);
     });
 
-    return ( <
-        div className = { styles.container } >
-        <
-        Sidebar / >
+    return (
+        <div className = { styles.container }>
+        <Sidebar/>
 
-        <
-        div className = { styles.main } >
-        <
-        Header / >
-        <
-        div className = { styles.tableContainer } > {
-            ownedItems ? ( <
-                div className = { styles.pageTitle } > Purchase History < /div>
-            ) : ( <
-                div className = { styles.pageTitle } > No Purchase History < /div>
+
+        <div className = { styles.main }>
+
+        <Header/>
+
+        <div className = { styles.tableContainer }> {
+            ownedItems ? (
+                <div className = { styles.pageTitle } > Purchase History </div>
+            ) : (
+                <div className = { styles.pageTitle }> No Purchase History </div>
             )
-        } <
-        div className = { styles.transactions } > {
+        }
+        <div className = { styles.transactions }> {
             ownedItems.map((item, index) => {
                 return <Transaction key = { index }
                 item = { item }
                 index = { index }
                 />
             })
-        } <
-        /div> <
-        /div> <
-        /div> <
-        /div>
+        } </div>
+        </div>
+        </div>
+         </div>
     )
 }
 
